@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prisma Technology</title>
+  <%= stylesheet_link_tag 'bootstrap.min' %>
+  <%= stylesheet_link_tag 'animate.min' %>
+  <%= stylesheet_link_tag 'icons' %>
+  <%= stylesheet_link_tag 'owl.theme' %>
+  <%= stylesheet_link_tag 'owl.carousel' %>
+  <%= stylesheet_link_tag 'nivo-lightbox' %>
+  <%= stylesheet_link_tag 'default' %>
+  <%= stylesheet_link_tag 'styles' %>
+  <%= stylesheet_link_tag 'responsive' %>
+  <%= stylesheet_link_tag 'blue' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= yield %>
+
+</body>
+<%= javascript_include_tag 'jquery.min' %>
+<script>
+          /* PRE LOADER */
+          jQuery(window).load(function () {
+              "use strict";
+              jQuery(".status").fadeOut();
+              jQuery(".preloader").delay(1000).fadeOut("slow");
+          })
+      </script>
+<%= javascript_include_tag 'smoothscroll' %>
+<%= javascript_include_tag 'bootstrap.min' %>
+<%= javascript_include_tag 'jquery.nav' %>
+<%= javascript_include_tag 'wow.min' %>
+<%= javascript_include_tag 'nivo-lightbox.min' %>
+<%= javascript_include_tag 'owl.carousel.min' %>
+<%= javascript_include_tag 'jquery.stellar.min' %>
+<%= javascript_include_tag 'retina.min' %>
+<%= javascript_include_tag 'jquery.simple-text-rotator.min' %>
+<%= javascript_include_tag 'jquery.ajaxchimp.min' %>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCXtGC939mM0UYTOSJrX6xBedxevY_30w"></script>
+<%= javascript_include_tag 'custom' %>
+</html>
