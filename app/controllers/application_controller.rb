@@ -4,13 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   def show
     if valid_page?
-      render template: "pages/#{params[:page]}"
+      render template: "#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found
     end
     private
     def valid_page?
-      File.exist?(Pathname.new(Rails.root + "app/views/pages/#{params[:page]}.html.erb"))
+      File.exist?(Pathname.new(Rails.root + "app/views/#{params[:page]}.html.erb"))
     end
   end
 
