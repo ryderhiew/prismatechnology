@@ -1,7 +1,4 @@
-class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-
+class PagesController < ApplicationController
   def show
       if valid_page?
         render template: "#{params[:page]}"
@@ -14,6 +11,4 @@ class ApplicationController < ActionController::Base
     def valid_page?
       File.exist?(Pathname.new(Rails.root + "app/views/#{params[:page]}.html.erb"))
     end
-
-
 end

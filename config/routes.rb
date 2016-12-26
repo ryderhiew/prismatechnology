@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'errors/not_found'
+
+  get 'errors/internal_server_error'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,6 +57,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get "*page" => "pages#show"
-  root "pages#show", page: "index"
+  root 'application#show', page: 'index'
+  match '*path' => redirect('/'), via: :get
+  #root "pages#show", page: "index"
 end
